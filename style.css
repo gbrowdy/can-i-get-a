@@ -76,6 +76,8 @@ button {
 .suggestion {
   height: 75px;
   line-height: 75px;
+  width: 650px;
+  margin: auto;
   background-color: #ececea;
   vertical-align: middle;
   font-family: 'Arvo', serif;
