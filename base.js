@@ -27,9 +27,11 @@ const getClickEventHandler = (suggestions, minFontSize, maxFontSize) => {
     const choice = suggestions[buttonType][arrayPoint[buttonType]];
     arrayPoint[buttonType]++;
     const suggestion = document.querySelector('.suggestion');
-    suggestion.style.fontSize = minFontSize.toString()
-      ? choice.length > 17
-      : maxFontSize.toString();
+    let fontSize = minFontSize.toString() + 'px';
+    if (choice.length <= 17) {
+      fontSize = maxFontSize.toString() + 'px';
+    }
+    suggestion.style.fontSize = fontSize;
     suggestion.innerText = choice;
   };
   return clickEventHandler;
