@@ -424,7 +424,7 @@ const main = () => {
       'Resident',
       'House',
       'Home',
-      'Homophobe',
+      'Hot',
       'Disagree',
       'Argument',
       'Couch',
