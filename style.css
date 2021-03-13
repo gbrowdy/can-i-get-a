@@ -18,23 +18,33 @@ a:visited {
   text-decoration: none;
 }
 
-a.lang:link {
+a.en:link {
   color: #fbeb9a;
   text-decoration: none;
 }
 
-a.lang:visited {
+a.en:visited {
   color: #fbeb9a;
   text-decoration: none;
 }
 
-a.currentlang:link {
+a.fr:link {
   color: #deb5d4;
   text-decoration: none;
 }
 
-a.currentlang:visited {
+a.fr:visited {
   color: #deb5d4;
+  text-decoration: none;
+}
+
+a.gr:link {
+  color: #d4deb5;
+  text-decoration: none;
+}
+
+a.gr:visited {
+  color: #d4deb5;
   text-decoration: none;
 }
 
