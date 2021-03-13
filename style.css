@@ -93,7 +93,8 @@ button {
   border-radius: 10px;
 }
 
-button.greek {
+button.greek,
+.suggestion.greek {
   font-family: 'Roboto Slab', serif;
 }
 
