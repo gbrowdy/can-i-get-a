@@ -6,6 +6,13 @@
 body {
   background-color: #74afad;
   text-align: center;
+  font-family: 'Montserrat', serif;
+  font-size: 20px;
+  color: #243b39;
+}
+
+body.greek {
+  font-family: 'Open Sans', serif;
 }
 
 a:link {
@@ -39,15 +46,26 @@ a.fr:visited {
 }
 
 a.gr:link {
-  color: #d4deb5;
+  color: #b4fcfb;
   text-decoration: none;
 }
 
 a.gr:visited {
-  color: #d4deb5;
+  color: #b4fcfb;
   text-decoration: none;
 }
 
+.location {
+  background-color: #fbeb9a;
+}
+
+.relationship {
+  background-color: #deb5d4;
+}
+
+.word {
+  background-color: #b4fcfb;
+}
 .title {
   font-size: 40px;
   position: relative;
@@ -73,6 +91,10 @@ button {
   margin: 7px;
   color: #243b39;
   border-radius: 10px;
+}
+
+button.greek {
+  font-family: 'Roboto Slab', serif;
 }
 
 .container {
