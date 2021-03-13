@@ -18,6 +18,15 @@ const shuffle = (array) => {
   return array;
 };
 
+const getSuggestionType = (buttonType) => {
+  for (let type of ['location', 'relationship', 'word']) {
+    if (buttonType.includes(type)) {
+      return type;
+    }
+  }
+  return null;
+};
+
 const getClickEventHandler = (suggestions, minFontSize, maxFontSize) => {
   Object.values(suggestions).map((v) => shuffle(v));
   let arrayPoint = {};
@@ -25,7 +34,7 @@ const getClickEventHandler = (suggestions, minFontSize, maxFontSize) => {
   const clickEventHandler = (e) => {
     const width = document.documentElement.clientWidth;
     const wideEnough = width > 550;
-    const buttonType = e.target.className;
+    const buttonType = getSuggestionType(e.target.className);
     const choice = suggestions[buttonType][arrayPoint[buttonType]];
     arrayPoint[buttonType]++;
     const suggestion = document.querySelector('.suggestion');
