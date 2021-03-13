@@ -23,12 +23,14 @@ const getClickEventHandler = (suggestions, minFontSize, maxFontSize) => {
   let arrayPoint = {};
   Object.keys(suggestions).forEach((k) => (arrayPoint[k] = 0));
   const clickEventHandler = (e) => {
+    const width = document.documentElement.clientWidth;
+    const wideEnough = width > 550;
     const buttonType = e.target.className;
     const choice = suggestions[buttonType][arrayPoint[buttonType]];
     arrayPoint[buttonType]++;
     const suggestion = document.querySelector('.suggestion');
     let fontSize = minFontSize.toString() + 'px';
-    if (choice.length <= 17) {
+    if (wideEnough || choice.length <= 17) {
       fontSize = maxFontSize.toString() + 'px';
     }
     suggestion.style.fontSize = fontSize;
