@@ -84,8 +84,8 @@ const getClickEventHandler = (suggestions, minFontSize, maxFontSize) => {
 // Track current event handlers for cleanup
 let currentHandlers = [];
 
-// Reusable initialization function
-const initializeSuggestions = (suggestions, minFontSize = FONT_SIZES.SMALL, maxFontSize = FONT_SIZES.LARGE) => {
+// Reusable initialization function (exposed globally for browser use)
+function initializeSuggestions(suggestions, minFontSize = FONT_SIZES.SMALL, maxFontSize = FONT_SIZES.LARGE) {
   const buttons = document.querySelectorAll('button');
 
   // Remove old event handlers
