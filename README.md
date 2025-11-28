@@ -17,8 +17,6 @@ The app supports English, French, Greek, and Danish with instant client-side lan
 
 ### Adding a New Language
 
-See [I18N_MIGRATION.md](./I18N_MIGRATION.md) for detailed instructions on adding new languages.
-
 Quick steps:
 1. Add translations to `translations.js`
 2. Create `script_yourlang.js` with suggestions (or convert from CSV using `csv-to-js.js`)
