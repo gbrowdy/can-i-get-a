@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Bulb -->
+  <circle cx="16" cy="12" r="9" fill="#FFD93D" stroke="#E6B800" stroke-width="1.5"/>
+  <!-- Filament glow -->
+  <circle cx="16" cy="12" r="4" fill="#FFF4B8"/>
+  <!-- Base -->
+  <rect x="12" y="21" width="8" height="2" fill="#888" rx="0.5"/>
+  <rect x="12" y="24" width="8" height="2" fill="#888" rx="0.5"/>
+  <rect x="13" y="27" width="6" height="2" fill="#888" rx="1"/>
+  <!-- Connection lines on base -->
+  <path d="M12 22.5h8M12 25.5h8" stroke="#666" stroke-width="0.5"/>
+</svg>
