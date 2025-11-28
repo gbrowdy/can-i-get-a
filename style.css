@@ -55,6 +55,22 @@ a.gr:visited {
   text-decoration: none;
 }
 
+a.dn:link {
+  color: #fbeb9a;
+  text-decoration: none;
+}
+
+a.dn:visited {
+  color: #fbeb9a;
+  text-decoration: none;
+}
+
+/* Active language indicator */
+.language-switcher a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .location {
   background-color: #fbeb9a;
 }
@@ -100,10 +116,6 @@ button.greek,
 
 .container {
   position: relative;
-}
-
-#container a:link {
-  color: red;
 }
 
 .suggestion {

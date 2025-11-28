@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# CSV working files (if you don't want to commit them)
+*.csv
+
+# Logs
+*.log
+npm-debug.log*

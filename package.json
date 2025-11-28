@@ -1,0 +1,32 @@
+{
+  "name": "can-i-get-a",
+  "version": "1.0.0",
+  "description": "Improv suggestion generator",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:unit": "jest tests/base.test.js tests/i18n.test.js",
+    "test:integration": "jest tests/integration.test.js",
+    "test:e2e": "jest tests/e2e-browser.test.js",
+    "test:validation": "jest tests/data-validation.test.js",
+    "test:edge": "jest tests/edge-cases.test.js",
+    "test:verbose": "jest --verbose",
+    "test:ci": "jest --coverage --ci --maxWorkers=2"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ],
+    "collectCoverageFrom": [
+      "*.js",
+      "!csv-to-js.js",
+      "!jest.config.js"
+    ]
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}

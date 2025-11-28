@@ -1,4 +1,5 @@
-const main = () => {
+// French suggestions
+(function() {
   const suggestions = {
     location: [
       'Maison abandonnée',
@@ -87,7 +88,6 @@ const main = () => {
       'Canot de sauvetage',
       'Limousine',
       "Magasin d'alcool",
-      'Grotte',
       'Appartement à Manhattan',
       'Toilettes pour hommes',
       'Tente militaire',
@@ -624,8 +624,6 @@ const main = () => {
       'Préjudice',
       'Présent',
       'Présentation',
-      'Président',
-      'Fierté',
       'Premier ministre',
       'Prince',
       'Princesse',
@@ -633,7 +631,6 @@ const main = () => {
       'Programmation',
       'Propriété',
       'Fierté',
-      'Provocant',
       'Provoqué',
       'Psychologie',
       'VTT',
@@ -653,8 +650,6 @@ const main = () => {
       'Remix',
       'Remords',
       'Répugnant',
-      'Irrité',
-      'Résident',
       'Respecté',
       'Revanche',
       'Révolté',
@@ -757,8 +752,6 @@ const main = () => {
       'Télévision',
       'Jumeaux',
       'Demi-tour',
-      'Arbitre',
-      'Injuste',
       'Uniforme',
       'Union',
       'Malchance',
@@ -821,13 +814,6 @@ const main = () => {
     ],
   };
 
-  const buttons = document.querySelectorAll('button');
-
-  for (let button of buttons) {
-    button.addEventListener('click', getClickEventHandler(suggestions, 19, 30));
-  }
-};
-
-document.addEventListener('DOMContentLoaded', function () {
-  main();
-});
+  // Export to global i18n system
+  window.suggestionsByLanguage.fr = suggestions;
+})();

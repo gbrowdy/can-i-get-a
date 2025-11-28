@@ -6,7 +6,42 @@ The idea is simple, the code is simple, the results are _fun_!
 
 ## Internationalization
 
-The repo currently has English, French and Greek versions. If you are interested in volunteering to translate into another language, please let one of the site creators know!
+The app supports English, French, Greek, and Danish with instant client-side language switching. If you are interested in volunteering to translate into another language, please let one of the site creators know!
+
+### Features
+
+✅ **Single-page app** - All languages in one HTML file
+✅ **Instant switching** - No page reload required
+✅ **Language persistence** - Remembers your preference
+✅ **Auto-detection** - Detects browser language
+
+### Adding a New Language
+
+See [I18N_MIGRATION.md](./I18N_MIGRATION.md) for detailed instructions on adding new languages.
+
+Quick steps:
+1. Add translations to `translations.js`
+2. Create `script_yourlang.js` with suggestions (or convert from CSV using `csv-to-js.js`)
+3. Add language to `i18n.js` supported languages
+4. Add language link to `index.html`
+5. Add CSS styles in `style.css`
+
+## Code Structure
+
+- `index.html` - Main application page (single page for all languages)
+- `i18n.js` - Language detection and switching system
+- `translations.js` - UI text translations for all languages
+- `base.js` - Shared logic for all languages (shuffle, event handlers, initialization)
+- `script.js`, `script_fr.js`, `script_gr.js`, `script_dn.js` - Language-specific suggestion data
+- `csv-to-js.js` - Utility to convert CSV files to JavaScript suggestion files
+- `style.css` - Styling for the application
+
+## Development
+
+The codebase includes configuration files for consistent formatting:
+- `.editorconfig` - Editor configuration
+- `.prettierrc` - Code formatting rules
+- `.eslintrc.json` - JavaScript linting rules
 
 ## Code
 

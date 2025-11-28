@@ -1,4 +1,5 @@
-const main = () => {
+// English suggestions
+(function() {
   const suggestions = {
     location: [
       'Operating Room',
@@ -119,7 +120,6 @@ const main = () => {
       'Outdoors ATM',
       'Logging Camp',
       'Fishing Dock',
-      'Rowboat',
       'Flooding Basement',
       'Haunted House',
       'Sleepover',
@@ -133,7 +133,6 @@ const main = () => {
       'Apple Orchard',
       'Amazon Jungle',
       'Apiary',
-      'Florist',
       'Wedding Reception',
       'Baby Shower',
       'Daycare',
@@ -193,7 +192,6 @@ const main = () => {
       'Mud Pit',
       'Circus Tent',
       'Newspaper Office',
-      'Tailor',
       'World of Dreams',
       'Alligator World',
       "Dentist's Chair",
@@ -451,7 +449,6 @@ const main = () => {
       'Geography',
       'Cartography',
       'Maps',
-      'Boots',
       'Marching',
       'Army',
       'Camping',
@@ -613,7 +610,6 @@ const main = () => {
       'Debate',
       'Club',
       'Diamond',
-      'Heart',
       'Shovel',
       'Cemetary',
       'Video Games',
@@ -628,7 +624,6 @@ const main = () => {
       'Sculptor',
       'Da Vinci',
       'Notebook',
-      'Journalism',
       'Expedition',
       'Exploring',
       'Adventure',
@@ -706,7 +701,6 @@ const main = () => {
       'Sell Out',
       'Rock Star',
       'Contract',
-      'Expand',
       'Pond',
       'Time Travel',
       'Paradox',
@@ -758,10 +752,8 @@ const main = () => {
       'Taxes',
       'Dome',
       'Bomb',
-      'Sphere',
       'Biosphere',
       'Planet',
-      'Space',
       'Comets',
       'The Sun',
       'Sunburn',
@@ -772,7 +764,6 @@ const main = () => {
       'Dishwasher',
       'Kitchen',
       'Cook',
-      'Hat',
       'Winter',
       'Summer',
       'Fall',
@@ -791,11 +782,9 @@ const main = () => {
       'Tickling',
       'Children',
       'Birth',
-      'Pregnancy',
       'Surprise',
       'Attack',
       'Defensive',
-      'Guilty',
       'Innocence',
       'Virgin',
       'Cocktail',
@@ -854,7 +843,6 @@ const main = () => {
       'Tall',
       'Short',
       'Temper',
-      'Sword',
       'Samurai',
       'Japan',
       'China',
@@ -872,7 +860,6 @@ const main = () => {
       'Sway',
       'Influence',
       'Unfocussed',
-      'Control',
       'Overwhelmed',
       'Rushed',
       'Pressure',
@@ -949,12 +936,10 @@ const main = () => {
       'Shame',
       'Playful',
       'Content',
-      'Interest',
       'Proud',
       'Accept',
       'Powerful',
       'Peaceful',
-      'Trust',
       'Optimism',
       'Excited',
       'Startled',
@@ -977,7 +962,6 @@ const main = () => {
       'Critical',
       'Lonely',
       'Lovely',
-      'Despair',
       'Guilty',
       'Hurt',
       'Despair',
@@ -1008,9 +992,6 @@ const main = () => {
       'Call',
       'Long Distance',
       'Operator',
-      'Telegram',
-      'Iceberg',
-      'Lettuce',
       'Bacon',
       'Tomato',
       'Sandwich',
@@ -1119,7 +1100,6 @@ const main = () => {
       'Twist',
       'Flip',
       'Tumble',
-      'Psychology',
       'Fumble',
       'Bumblebee',
       'Wasp',
@@ -1157,10 +1137,8 @@ const main = () => {
       'Rainy',
       'Cloudy',
       'Tornado',
-      'Storm',
       'Flood',
       'Heat Wave',
-      'Nature',
       'Artificial',
       'Factory',
       'Assembly',
@@ -1168,8 +1146,6 @@ const main = () => {
       'Funding',
       'Scholarship',
       'Grant',
-      'Loan',
-      'Interest',
       'Debt',
       'Finances',
       'Secretary',
@@ -1252,7 +1228,6 @@ const main = () => {
       'Booster',
       'Delivery',
       'Expand',
-      'Contract',
       'Gain',
       'Generate',
       'Maximum',
@@ -1308,13 +1283,6 @@ const main = () => {
     ],
   };
 
-  const buttons = document.querySelectorAll('button');
-
-  for (let button of buttons) {
-    button.addEventListener('click', getClickEventHandler(suggestions, 18, 29));
-  }
-};
-
-document.addEventListener('DOMContentLoaded', function () {
-  main();
-});
+  // Export to global i18n system
+  window.suggestionsByLanguage.en = suggestions;
+})();
