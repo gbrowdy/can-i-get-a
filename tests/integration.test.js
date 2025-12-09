@@ -30,7 +30,7 @@ describe('Application Integration Tests', () => {
           <a href="#" data-lang="en" class="en">en</a>
           <a href="#" data-lang="fr" class="fr">fr</a>
           <a href="#" data-lang="gr" class="gr">gr</a>
-          <a href="#" data-lang="dn" class="dn">dn</a>
+          <a href="#" data-lang="dk" class="dk">dk</a>
         </div>
       </div>
     `;
@@ -52,7 +52,7 @@ describe('Application Integration Tests', () => {
         relationship: ['Δάσκαλος/Μαθητής', 'Αφεντικό/Υπάλληλος'],
         word: ['Εμπιστοσύνη', 'Περιπέτεια', 'Μυστήριο']
       },
-      dn: {
+      dk: {
         location: ['Bibliotek', 'Café', 'Park'],
         relationship: ['Lærer/Elev', 'Chef/Medarbejder'],
         word: ['Tillid', 'Eventyr', 'Mysterium']
@@ -103,7 +103,7 @@ describe('Application Integration Tests', () => {
         fontSizes: { small: 18, large: 29 },
         bodyClass: 'greek'
       },
-      dn: {
+      dk: {
         title: 'Kan jeg bede om...',
         subtitle: 'impro forslag ved et tryk på en knap',
         buttons: { location: 'Sted', relationship: 'Forhold', word: 'Ord' },
@@ -398,7 +398,7 @@ describe('Application Integration Tests', () => {
     test('should handle many rapid reinitialization', () => {
       // Rapidly switch languages
       for (let i = 0; i < 10; i++) {
-        const lang = ['en', 'fr', 'gr', 'dn'][i % 4];
+        const lang = ['en', 'fr', 'gr', 'dk'][i % 4];
         initializeSuggestions(window.suggestionsByLanguage[lang]);
       }
 
@@ -501,11 +501,11 @@ describe('Application Integration Tests', () => {
     test('should handle URL with language parameter on page load', () => {
       // Set URL parameter
       delete window.location;
-      window.location = new URL('http://localhost/?lang=dn');
+      window.location = new URL('http://localhost/?lang=dk');
 
       i18n.init();
 
-      expect(i18n.currentLanguage).toBe('dn');
+      expect(i18n.currentLanguage).toBe('dk');
       expect(document.title).toBe('Kan jeg bede om...');
     });
 

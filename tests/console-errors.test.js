@@ -55,7 +55,7 @@ describe('Console Error Detection', () => {
       'script_en.js',
       'script_fr.js',
       'script_gr.js',
-      'script_dn.js'
+      'script_dk.js'
     ];
 
     // Track what gets loaded
@@ -90,10 +90,10 @@ describe('Console Error Detection', () => {
     expect(window.suggestionsByLanguage.en).toBeDefined();
     expect(window.suggestionsByLanguage.fr).toBeDefined();
     expect(window.suggestionsByLanguage.gr).toBeDefined();
-    expect(window.suggestionsByLanguage.dn).toBeDefined();
+    expect(window.suggestionsByLanguage.dk).toBeDefined();
 
     // Verify loaded languages
-    expect(loadedLanguages).toEqual(['en', 'fr', 'gr', 'dn']);
+    expect(loadedLanguages).toEqual(['en', 'fr', 'gr', 'dk']);
   });
 
   test('Each language should have all three categories', () => {
@@ -106,7 +106,7 @@ describe('Console Error Detection', () => {
       { file: 'script_en.js', lang: 'en' },
       { file: 'script_fr.js', lang: 'fr' },
       { file: 'script_gr.js', lang: 'gr' },
-      { file: 'script_dn.js', lang: 'dn' }
+      { file: 'script_dk.js', lang: 'dk' }
     ];
 
     scriptFiles.forEach(({ file, lang }) => {
@@ -134,7 +134,7 @@ describe('Console Error Detection', () => {
     const beforeGlobals = Object.keys(global);
 
     // Load all scripts
-    const scriptFiles = ['script_en.js', 'script_fr.js', 'script_gr.js', 'script_dn.js'];
+    const scriptFiles = ['script_en.js', 'script_fr.js', 'script_gr.js', 'script_dk.js'];
     scriptFiles.forEach(file => {
       const scriptPath = path.join(__dirname, '..', file);
       const scriptContent = fs.readFileSync(scriptPath, 'utf8');
@@ -180,15 +180,15 @@ describe('Console Error Detection', () => {
     const grFirstLocation = window.suggestionsByLanguage.gr.location[0];
 
     // Load Danish
-    const dnScript = fs.readFileSync(path.join(__dirname, '..', 'script_dn.js'), 'utf8');
-    eval(dnScript);
-    const dnFirstLocation = window.suggestionsByLanguage.dn.location[0];
+    const dkScript = fs.readFileSync(path.join(__dirname, '..', 'script_dk.js'), 'utf8');
+    eval(dkScript);
+    const dkFirstLocation = window.suggestionsByLanguage.dk.location[0];
 
     // Verify all languages still exist and haven't been overwritten
     expect(window.suggestionsByLanguage.en.location[0]).toBe(enFirstLocation);
     expect(window.suggestionsByLanguage.fr.location[0]).toBe(frFirstLocation);
     expect(window.suggestionsByLanguage.gr.location[0]).toBe(grFirstLocation);
-    expect(window.suggestionsByLanguage.dn.location[0]).toBe(dnFirstLocation);
+    expect(window.suggestionsByLanguage.dk.location[0]).toBe(dkFirstLocation);
 
     // Verify they're actually different
     expect(enFirstLocation).not.toBe(frFirstLocation);
@@ -199,6 +199,6 @@ describe('Console Error Detection', () => {
     console.log('  EN:', enFirstLocation);
     console.log('  FR:', frFirstLocation);
     console.log('  GR:', grFirstLocation);
-    console.log('  DN:', dnFirstLocation);
+    console.log('  DK:', dkFirstLocation);
   });
 });

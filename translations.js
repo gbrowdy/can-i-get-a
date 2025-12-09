@@ -36,7 +36,7 @@ const translations = {
     fontSizes: { small: 19, large: 30 },
     bodyClass: 'greek'
   },
-  dn: {
+  dk: {
     title: 'Må jeg bede om...',
     subtitle: 'impro-bud ved din fingertip',
     buttons: {
@@ -55,5 +55,5 @@ const languageNames = {
   en: 'en',
   fr: 'fr',
   gr: 'gr',
-  dn: 'dn'
+  dk: 'dk'
 };

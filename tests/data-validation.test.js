@@ -17,7 +17,7 @@ describe('Suggestion Data Validation', () => {
       { file: 'script_en.js', lang: 'en' },
       { file: 'script_fr.js', lang: 'fr' },
       { file: 'script_gr.js', lang: 'gr' },
-      { file: 'script_dn.js', lang: 'dn' }
+      { file: 'script_dk.js', lang: 'dk' }
     ];
 
     // Initialize window.suggestionsByLanguage BEFORE loading scripts
@@ -35,7 +35,7 @@ describe('Suggestion Data Validation', () => {
   });
 
   describe('Data Structure Completeness', () => {
-    const languages = ['en', 'fr', 'gr', 'dn'];
+    const languages = ['en', 'fr', 'gr', 'dk'];
 
     languages.forEach(lang => {
       test(`${lang} should have all three categories`, () => {
@@ -60,7 +60,7 @@ describe('Suggestion Data Validation', () => {
   });
 
   describe('Data Quality', () => {
-    const languages = ['en', 'fr', 'gr', 'dn'];
+    const languages = ['en', 'fr', 'gr', 'dk'];
 
     languages.forEach(lang => {
       describe(`${lang} data quality`, () => {
@@ -150,7 +150,7 @@ describe('Suggestion Data Validation', () => {
 
   describe('Data Consistency Across Languages', () => {
     test('should have substantial content (>50 items per category minimum)', () => {
-      const languages = ['en', 'fr', 'gr', 'dn'];
+      const languages = ['en', 'fr', 'gr', 'dk'];
 
       languages.forEach(lang => {
         expect(suggestions[lang].location.length).toBeGreaterThan(50);
@@ -185,9 +185,9 @@ describe('Suggestion Data Validation', () => {
 
     test('Danish should contain Danish special characters', () => {
       const danishText = [
-        ...suggestions.dn.location,
-        ...suggestions.dn.relationship,
-        ...suggestions.dn.word
+        ...suggestions.dk.location,
+        ...suggestions.dk.relationship,
+        ...suggestions.dk.word
       ].join(' ');
 
       // Should contain æ, ø, or å
@@ -195,7 +195,7 @@ describe('Suggestion Data Validation', () => {
     });
 
     test('should not have unintended HTML or script tags', () => {
-      const languages = ['en', 'fr', 'gr', 'dn'];
+      const languages = ['en', 'fr', 'gr', 'dk'];
 
       languages.forEach(lang => {
         const allText = [
@@ -213,7 +213,7 @@ describe('Suggestion Data Validation', () => {
 
     test('should handle Unicode properly (emojis, symbols)', () => {
       // If there are emojis or special symbols, they should render correctly
-      const languages = ['en', 'fr', 'gr', 'dn'];
+      const languages = ['en', 'fr', 'gr', 'dk'];
 
       languages.forEach(lang => {
         const allSuggestions = [
@@ -234,7 +234,7 @@ describe('Suggestion Data Validation', () => {
   });
 
   describe('Relationship Format Validation', () => {
-    const languages = ['en', 'fr', 'gr', 'dn'];
+    const languages = ['en', 'fr', 'gr', 'dk'];
 
     languages.forEach(lang => {
       test(`${lang} relationships should use proper separator`, () => {
@@ -272,7 +272,7 @@ describe('Suggestion Data Validation', () => {
   });
 
   describe('Word Category Validation', () => {
-    const languages = ['en', 'fr', 'gr', 'dn'];
+    const languages = ['en', 'fr', 'gr', 'dk'];
 
     languages.forEach(lang => {
       test(`${lang} words should be relatively short (word-like)`, () => {
@@ -304,7 +304,7 @@ describe('Suggestion Data Validation', () => {
   describe('Statistical Analysis', () => {
     test('should print data statistics for reference', () => {
       console.log('\n=== Suggestion Data Statistics ===');
-      const languages = ['en', 'fr', 'gr', 'dn'];
+      const languages = ['en', 'fr', 'gr', 'dk'];
 
       languages.forEach(lang => {
         const locCount = suggestions[lang].location.length;

@@ -35,7 +35,7 @@ describe('E2E Browser Tests', () => {
             <a href="#" data-lang="en" class="en">en</a> •
             <a href="#" data-lang="fr" class="fr">fr</a> •
             <a href="#" data-lang="gr" class="gr">gr</a> •
-            <a href="#" data-lang="dn" class="dn">dn</a>
+            <a href="#" data-lang="dk" class="dk">dk</a>
           </div>
         </div>
       </body>
@@ -59,7 +59,7 @@ describe('E2E Browser Tests', () => {
         relationship: ['Οδηγός λεωφορείου/Τακτικός', 'Μπάρμαν/Σερβιτόρα'],
         word: ['Εμπόριο', 'Σύνταγμα', 'Πατριώτης']
       },
-      dn: {
+      dk: {
         location: ['Operationsstuen', 'Indkørsel', 'Køkken'],
         relationship: ['Buschauffør/En fast kunde', 'Bartender/Servitrice'],
         word: ['Handel', 'Forfatning', 'Patriot']
@@ -140,7 +140,7 @@ describe('E2E Browser Tests', () => {
         fontSizes: { small: 19, large: 30 },
         bodyClass: 'greek'
       },
-      dn: {
+      dk: {
         title: 'Må jeg bede om...',
         subtitle: 'impro-bud ved din fingertip',
         buttons: { location: 'Et sted', relationship: 'En relation', word: 'Et ord' },
@@ -350,7 +350,7 @@ describe('E2E Browser Tests', () => {
     });
 
     test('should switch through all languages', () => {
-      const languages = ['fr', 'gr', 'dn', 'en'];
+      const languages = ['fr', 'gr', 'dk', 'en'];
 
       languages.forEach(lang => {
         const link = document.querySelector(`[data-lang="${lang}"]`);
@@ -507,7 +507,7 @@ describe('E2E Browser Tests', () => {
     });
 
     test('Journey: User explores all categories in multiple languages', () => {
-      const languages = ['en', 'fr', 'gr', 'dn'];
+      const languages = ['en', 'fr', 'gr', 'dk'];
       const categories = ['location', 'relationship', 'word'];
 
       languages.forEach(lang => {

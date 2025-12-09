@@ -20,7 +20,7 @@ describe('i18n.js - Internationalization', () => {
         <a href="#" data-lang="en" class="en">en</a>
         <a href="#" data-lang="fr" class="fr">fr</a>
         <a href="#" data-lang="gr" class="gr">gr</a>
-        <a href="#" data-lang="dn" class="dn">dn</a>
+        <a href="#" data-lang="dk" class="dk">dk</a>
       </div>
     `;
 
@@ -94,7 +94,7 @@ describe('i18n.js - Internationalization', () => {
         fontSizes: { small: 19, large: 30 },
         bodyClass: 'greek'
       },
-      dn: {
+      dk: {
         title: 'Må jeg bede om...',
         subtitle: 'impro-bud',
         buttons: { location: 'Et sted', relationship: 'En relation', word: 'Et ord' },
@@ -175,7 +175,7 @@ describe('i18n.js - Internationalization', () => {
     });
 
     test('should update URL parameter', () => {
-      i18n.setLanguage('dn');
+      i18n.setLanguage('dk');
       expect(window.history.replaceState).toHaveBeenCalled();
     });
 
@@ -227,7 +227,7 @@ describe('i18n.js - Internationalization', () => {
     });
 
     test('should translate for Danish', () => {
-      i18n.currentLanguage = 'dn';
+      i18n.currentLanguage = 'dk';
       expect(i18n.t('buttons.relationship')).toBe('En relation');
     });
 
@@ -322,12 +322,12 @@ describe('i18n.js - Internationalization', () => {
       const links = document.querySelectorAll('.language-switcher a');
       links.forEach(link => link.classList.add('active'));
 
-      i18n.currentLanguage = 'dn';
+      i18n.currentLanguage = 'dk';
       i18n.updateLanguageSwitcher();
 
       const activeLinks = document.querySelectorAll('.language-switcher a.active');
       expect(activeLinks.length).toBe(1);
-      expect(activeLinks[0].dataset.lang).toBe('dn');
+      expect(activeLinks[0].dataset.lang).toBe('dk');
     });
   });
 
@@ -370,7 +370,7 @@ describe('i18n.js - Internationalization', () => {
 
   describe('Edge Cases', () => {
     test('should handle rapid language switching', () => {
-      const languages = ['en', 'fr', 'gr', 'dn'];
+      const languages = ['en', 'fr', 'gr', 'dk'];
 
       languages.forEach(lang => {
         i18n.setLanguage(lang);

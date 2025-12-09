@@ -61,13 +61,13 @@ describe('Suggestion Data Loading', () => {
       en: { location: [], relationship: [], word: [] },
       fr: { location: [], relationship: [], word: [] },
       gr: { location: [], relationship: [], word: [] },
-      dn: { location: [], relationship: [], word: [] }
+      dk: { location: [], relationship: [], word: [] }
     };
 
     expect(window.suggestionsByLanguage.en).toBeDefined();
     expect(window.suggestionsByLanguage.fr).toBeDefined();
     expect(window.suggestionsByLanguage.gr).toBeDefined();
-    expect(window.suggestionsByLanguage.dn).toBeDefined();
+    expect(window.suggestionsByLanguage.dk).toBeDefined();
   });
 
   test('Suggestions should not be empty', () => {

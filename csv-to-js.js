@@ -132,7 +132,7 @@ const escapeQuotes = (str) => str.replace(/'/g, "\\'");
 
 // Get language name from code for comments
 const getLanguageName = (code) => {
-  const names = { en: 'English', fr: 'French', gr: 'Greek', dn: 'Danish', de: 'German', es: 'Spanish' };
+  const names = { en: 'English', fr: 'French', gr: 'Greek', dk: 'Danish', de: 'German', es: 'Spanish' };
   return names[code] || code.toUpperCase();
 };
 

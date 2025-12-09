@@ -110,7 +110,7 @@ console.log(i18n.currentLanguage);
 
 ```javascript
 Object.keys(window.suggestionsByLanguage)
-// => ["en", "fr", "gr", "dn"]
+// => ["en", "fr", "gr", "dk"]
 
 window.suggestionsByLanguage.en
 // => { location: [...], relationship: [...], word: [...] }

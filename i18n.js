@@ -2,7 +2,7 @@
 const i18n = {
   currentLanguage: 'en',
   defaultLanguage: 'en',
-  supportedLanguages: ['en', 'fr', 'gr', 'dn'],
+  supportedLanguages: ['en', 'fr', 'gr', 'dk'],
 
   // Get language from URL parameter or browser preference
   detectLanguage() {
@@ -84,7 +84,7 @@ const i18n = {
       en: 'script_en.js',
       fr: 'script_fr.js',
       gr: 'script_gr.js',
-      dn: 'script_dn.js'
+      dk: 'script_dk.js'
     };
 
     return new Promise((resolve, reject) => {

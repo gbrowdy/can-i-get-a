@@ -1262,5 +1262,5 @@
   };
 
   // Export to global i18n system
-  window.suggestionsByLanguage.dn = suggestions;
+  window.suggestionsByLanguage.dk = suggestions;
 })();
